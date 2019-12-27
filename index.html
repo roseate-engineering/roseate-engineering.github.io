@@ -38,6 +38,13 @@
       type="text/css"
     />
 
+    <link
+      href="css/loading.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+
     <!-- favicon-->
     <link rel="shortcut icon" href="images/logo.png" type="image/png" />
     <link rel="icon" href="images/logo.png" type="image/png" />
@@ -56,9 +63,12 @@
     <![endif]-->
   </head>
 
+  <div class="loading" id="loading">Loading</div>
+
   <body>
     <!-- Start Logo Section -->
-    <section id="logo-section" class="text-center">
+    
+    <section id="logo-section" class="text-center initially-hidden">
       <div class="container">
         <div class="row">
           <div class="col-md-12" style="position: relative; top: 15px;">
@@ -68,9 +78,9 @@
       </div>
     </section>
     <!-- End Logo Section -->
-
+    
     <!-- Start Main Body Section -->
-    <div class="mainbody-section text-center">
+    <div class="mainbody-section text-center initially-hidden">
       <div class="container">
         <div class="row" id="menu-item-row">
           <div class="col-md-3">
@@ -161,7 +171,7 @@
     <!-- End Main Body Section -->
 
     <!-- Start Copyright Section -->
-    <div class="copyright text-center">
+    <div class="copyright text-center initially-hidden">
       <h6>Copyright &copy; Roseate 2019</h6>
       <h6>
         Designed by <a href="https://sanchitcop19.github.io">Sanchit Batra</a>
@@ -1228,6 +1238,7 @@
           <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
           <script src="js/financials.js"></script>
           <script src="js/index.js"></script>
+          <script src="js//loading.js"></script>
         </div>
       </div>
     </div>
