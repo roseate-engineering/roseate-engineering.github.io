@@ -1,5 +1,5 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600);
-@import url(http://fonts.googleapis.com/css?family=Oswald:400,300);
+@import url(http:/*fonts.googleapis.com/css?family=Open+Sans:400,300,700,600);
+@import url(http:/*fonts.googleapis.com/css?family=Oswald:400,300);
 
 
 body {
@@ -104,16 +104,13 @@ fieldset[disabled] .btn-primary.active {
     padding-bottom: 60px;
     color: #999;
     font-size: 18px;
-    //font-style: italic;
+    /*font-style: italic;*/
     font-weight: 300;
 }
 
 
 /**** Start Logo Section ****/
 
-#logo-section {
-
-}
 
 .logo h1 {
     font-family: 'Lobster', cursive;
@@ -193,10 +190,10 @@ fieldset[disabled] .btn-primary.active {
 .menu-item:hover a {
     text-decoration: none;
     color: #333;
-//	animation: wobble;
-//	-webkit-animation: wobble;
-//	animation-duration: 1000ms;
-//	-webkit-animation-duration: 1000ms;
+/*	animation: wobble;*/
+/*	-webkit-animation: wobble;*/
+/*	animation-duration: 1000ms;*/
+/*	-webkit-animation-duration: 1000ms;*/
 }
 
 @media only screen
@@ -535,7 +532,7 @@ and (max-width : 1199px) {
 .custom-tab .nav-tabs.nav-justified > .active > a:hover,
 .custom-tab .nav-tabs.nav-justified > .active > a:focus {
     border-radius: 0;
-    //border-left-color: transparent;
+    /*border-left-color: transparent;*/
     color: #FFF;
     
 }
@@ -788,7 +785,7 @@ and (max-width : 991px) {
     background: #FF432E;
     color: #fff;
     padding: 20px 30px;
-    //margin-top: 80px;
+    /*margin-top: 80px;*/
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     -o-border-radius: 3px;
@@ -861,7 +858,7 @@ and (max-width : 991px) {
 
 .footer-social li:hover a {
     background: #fff;
-    //border: 1px solid #FF432E;
+    /*border: 1px solid #FF432E;*/
     color: #666;
 }
 
