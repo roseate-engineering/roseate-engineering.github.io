@@ -1,9 +1,10 @@
 
-window.onload = function () {
+drawChart = function (event) {
 
     var chart = new CanvasJS.Chart("chartContainer", {
         animationEnabled: true,
         theme: "light2",
+        width: this.window.screen.width*0.9,
         title:{
             text: "Growth Trends (INR)"
         },
@@ -23,4 +24,7 @@ window.onload = function () {
     chart.render();
     
     }
+
+window.addEventListener('load', drawChart)
+window.addEventListener('resize', drawChart)
     
