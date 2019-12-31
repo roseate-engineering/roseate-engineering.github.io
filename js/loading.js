@@ -15,3 +15,4 @@ window.onload = function(event){
         loading.parentNode.removeChild(loading);
     })
 }
+
