@@ -47,6 +47,9 @@
     <!-- Template js -->
     <script async src="js/jquery-2.1.1.min.js"></script>
 
+    <!-- Lazy load images-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.0/lazysizes.min.js" async></script>
+
 
     
 
@@ -80,21 +83,21 @@
         <div class="row" id="menu-item-row">
           <div class="col-md-3">
             <div class="menu-item green">
-              <a href="#about-modal" data-toggle="modal">
+              <a href="#about-modal" data-toggle="modal" class="menu-modal">
                 <i class="fa fa-magic"></i>
                 <p>About Us</p>
               </a>
             </div>
 
             <div class="menu-item blue">
-              <a href="#solutions-modal" data-toggle="modal">
+              <a href="#solutions-modal" data-toggle="modal" class="menu-modal">
                 <i class="fa fa-file-photo-o"></i>
                 <p>Solutions and Services</p>
               </a>
             </div>
 
             <div class="menu-item green">
-              <a href="#accreditations-modal" data-toggle="modal">
+              <a href="#accreditations-modal" data-toggle="modal" class="menu-modal">
                 <i class="fa fa-user"></i>
                 <p>Accreditations</p>
               </a>
@@ -109,6 +112,7 @@
                     href="#customers-modal"
                     data-toggle="modal"
                     style="visibility:hidden"
+                    class="menu-modal"
                   >
                     <i class="fa fa-area-chart"></i>
                     <p>Our Esteemed Customers</p>
@@ -120,7 +124,7 @@
             <div class="row">
               <div class="col-md-6">
                 <div class="menu-item green responsive">
-                  <a href="#customers-modal" data-toggle="modal">
+                  <a href="#customers-modal" data-toggle="modal" class="menu-modal">
                     <i class="fa fa-mortar-board"></i>
                     <p>Our Esteemed Customers</p>
                   </a>
@@ -129,7 +133,7 @@
 
               <div class="col-md-6">
                 <div class="menu-item blue responsive-2">
-                  <a href="#associate-modal" data-toggle="modal">
+                  <a href="#associate-modal" data-toggle="modal" class="menu-modal">
                     <i class="fa fa-users"></i>
                     <p>Our Associate Partners</p>
                   </a>
@@ -140,21 +144,21 @@
 
           <div class="col-md-3">
             <div class="menu-item blue">
-              <a href="#testimonial-modal" data-toggle="modal">
+              <a href="#testimonial-modal" data-toggle="modal" class="menu-modal">
                 <i class="fa fa-area-chart"></i>
                 <p>Financials</p>
               </a>
             </div>
 
             <div class="menu-item green">
-              <a href="#contact-modal" data-toggle="modal">
+              <a href="#contact-modal" data-toggle="modal" class="menu-modal">
                 <i class="fa fa-comment-o"></i>
                 <p>Contact Form</p>
               </a>
             </div>
 
             <div class="menu-item blue">
-              <a href="#price-modal" data-toggle="modal">
+              <a href="#price-modal" data-toggle="modal" class="menu-modal">
                 <i class="fa fa-envelope-o"></i>
                 <p>Price List</p>
               </a>
@@ -303,28 +307,34 @@
         <div class="container">
           <div class="col-sm-12 acc-img">
             <img
-              src="accreditations/capsugel.jpg"
+              data-src="accreditations/capsugel.jpg"
               style="height:80%;width:49%;margin: 3px; border: 3px solid #00004d;"
+              class="lazy-img"
             />
             <img
-              src="accreditations/inox.jpg"
+              data-src="accreditations/inox.jpg"
               style="height:80%;width:49%;margin: 3px; border: 3px solid #00004d;"
+              class="lazy-img"
             />
             <img
-              src="accreditations/usl.jpg"
+              data-src="accreditations/usl.jpg"
               style="height:80%;width:49%;margin: 3px; border: 3px solid #00004d;"
+              class="lazy-img"
             />
             <img
-              src="accreditations/iskra.jpg"
+              data-src="accreditations/iskra.jpg"
               style="height:80%;width:49%;margin: 3px;border: 3px solid #00004d;"
+              class="lazy-img"
             />
             <img
-              src="accreditations/ndmc.jpg"
+              data-src="accreditations/ndmc.jpg"
               style="height:80%;width:49%;margin: 3px; border: 3px solid #00004d;"
+              class="lazy-img"
             />
             <img
-              src="accreditations/kalpa.jpg"
+              data-src="accreditations/kalpa.jpg"
               style="height:80%;width:49%;margin: 3px; border: 3px solid #00004d;"
+              class="lazy-img"
             />
           </div>
         </div>
@@ -495,8 +505,8 @@
             <div class="col-md-3 col-sm-6">
               <div class="team-member">
                 <img
-                  src="images/team/dbcorp.png"
-                  class="img-responsive"
+                  data-src="images/team/dbcorp.png"
+                  class="img-responsive lazy-img"
                   alt=""
                 />
                 <div class="team-details">
@@ -513,8 +523,8 @@
             <div class="col-md-3 col-sm-6">
               <div class="team-member">
                 <img
-                  src="images/team/diageo.jpg"
-                  class="img-responsive"
+                  data-src="images/team/diageo.jpg"
+                  class="img-responsive lazy-img"
                   alt=""
                 />
                 <div class="team-details">
@@ -527,8 +537,8 @@
             <div class="col-md-3 col-sm-6">
               <div class="team-member">
                 <img
-                  src="images/team/grinfra.jpg"
-                  class="img-responsive"
+                  data-src="images/team/grinfra.jpg"
+                  class="img-responsive lazy-img"
                   alt=""
                 />
                 <div class="team-details">
@@ -541,8 +551,8 @@
             <div class="col-md-3 col-sm-6">
               <div class="team-member">
                 <img
-                  src="images/team/daurala_sugar.jpg"
-                  class="img-responsive"
+                  data-src="images/team/daurala_sugar.jpg"
+                  class="img-responsive lazy-img"
                   alt=""
                 />
                 <div class="team-details">
@@ -561,8 +571,8 @@
             <div class="col-md-3 col-sm-6">
               <div class="team-member">
                 <img
-                  src="images/team/iskra.jpg"
-                  class="img-responsive"
+                  data-src="images/team/iskra.jpg"
+                  class="img-responsive lazy-img"
                   alt=""
                 />
                 <div class="team-details">
@@ -575,8 +585,8 @@
             <div class="col-md-3 col-sm-6">
               <div class="team-member">
                 <img
-                  src="images/team/siemens.jpg"
-                  class="img-responsive"
+                  data-src="images/team/siemens.jpg"
+                  class="img-responsive lazy-img"
                   alt=""
                 />
                 <div class="team-details">
@@ -593,7 +603,7 @@
 
             <div class="col-md-3 col-sm-6">
               <div class="team-member">
-                <img src="images/team/rms.JPG" class="img-responsive" alt="" />
+                <img data-src="images/team/rms.JPG" class="img-responsive lazy-img" alt="" />
                 <div class="team-details">
                   <h4>RMS Automation</h4>
                   <h4>
@@ -606,8 +616,8 @@
             <div class="col-md-3 col-sm-6">
               <div class="team-member">
                 <img
-                  src="images/team/essaar.png"
-                  class="img-responsive"
+                  data-src="images/team/essaar.png"
+                  class="img-responsive lazy-img"
                   alt=""
                 />
                 <div class="team-details">
@@ -620,8 +630,8 @@
             <div class="col-md-3 col-sm-6">
               <div class="team-member">
                 <img
-                  src="images/team/massive.JPG"
-                  class="img-responsive"
+                  data-src="images/team/massive.JPG"
+                  class="img-responsive lazy-img"
                   alt=""
                 />
                 <div class="team-details">
@@ -633,8 +643,8 @@
             <div class="col-md-3 col-sm-6">
               <div class="team-member">
                 <img
-                  src="images/team/paradip.jpg"
-                  class="img-responsive"
+                  data-src="images/team/paradip.jpg"
+                  class="img-responsive lazy-img"
                   alt=""
                 />
                 <div class="team-details">
@@ -649,8 +659,8 @@
             <div class="col-md-3 col-sm-6">
               <div class="team-member">
                 <img
-                  src="images/team/amplus.png"
-                  class="img-responsive"
+                  data-src="images/team/amplus.png"
+                  class="img-responsive lazy-img"
                   alt=""
                 />
                 <div class="team-details">
@@ -665,8 +675,8 @@
             <div class="col-md-3 col-sm-6">
               <div class="team-member">
                 <img
-                  src="images/team/vayamep.jpg"
-                  class="img-responsive"
+                  data-src="images/team/vayamep.jpg"
+                  class="img-responsive lazy-img"
                   alt=""
                 />
                 <div class="team-details">
@@ -679,8 +689,8 @@
             <div class="col-md-3 col-sm-6">
               <div class="team-member">
                 <img
-                  src="images/team/creative.jpg"
-                  class="img-responsive"
+                  data-src="images/team/creative.jpg"
+                  class="img-responsive lazy-img"
                   alt=""
                   height="10"
                 />
@@ -694,8 +704,8 @@
             <div class="col-md-3 col-sm-6">
               <div class="team-member">
                 <img
-                  src="images/team/adcon.JPG"
-                  class="img-responsive"
+                  data-src="images/team/adcon.JPG"
+                  class="img-responsive lazy-img"
                   alt=""
                 />
                 <div class="team-details">
@@ -738,7 +748,7 @@
           <div class="row">
             <div class="col-md-3 col-sm-6">
               <div class="team-member">
-                <img src="images/team/abb.gif" class="img-responsive" alt="" />
+                <img data-src="images/team/abb.gif" class="img-responsive lazy-img" alt="" />
                 <div class="team-details">
                   <h4>ABB</h4>
 
@@ -750,8 +760,8 @@
             <div class="col-md-3 col-sm-6">
               <div class="team-member">
                 <img
-                  src="images/team/landt.PNG"
-                  class="img-responsive"
+                  data-src="images/team/landt.PNG"
+                  class="img-responsive lazy-img"
                   alt=""
                 />
                 <div class="team-details">
@@ -767,8 +777,8 @@
             <div class="col-md-3 col-sm-6">
               <div class="team-member">
                 <img
-                  src="images/team/schneider.svg"
-                  class="img-responsive"
+                  data-src="images/team/schneider.svg"
+                  class="img-responsive lazy-img"
                   alt=""
                 />
                 <div class="team-details">
@@ -784,7 +794,7 @@
 
             <!-- <div class="col-md-3 col-sm-6">
                             <div class="team-member">
-                                <img src="images/team/manage-2.png" class="img-responsive" alt="">
+                                <img data-src="images/team/manage-2.png" class="img-responsive lazy-img" alt="">
                                 <div class="team-details">
                                     <h4>ADCON</h4>
 
@@ -795,8 +805,8 @@
             <div class="col-md-3 col-sm-6">
               <div class="team-member">
                 <img
-                  src="images/team/philips.png"
-                  class="img-responsive"
+                  data-src="images/team/philips.png"
+                  class="img-responsive lazy-img"
                   alt=""
                 />
                 <div class="team-details">
@@ -809,8 +819,8 @@
             <div class="col-md-3 col-sm-6">
               <div class="team-member">
                 <img
-                  src="images/team/crompton.png"
-                  class="img-responsive"
+                  data-src="images/team/crompton.png"
+                  class="img-responsive lazy-img"
                   alt=""
                 />
                 <div class="team-details">
@@ -822,8 +832,8 @@
             <div class="col-md-3 col-sm-6">
               <div class="team-member">
                 <img
-                  src="images/team/ashoka.JPG"
-                  class="img-responsive"
+                  data-src="images/team/ashoka.JPG"
+                  class="img-responsive lazy-img"
                   alt=""
                 />
                 <div class="team-details">
@@ -838,8 +848,8 @@
             <div class="col-md-3 col-sm-6">
               <div class="team-member">
                 <img
-                  src="images/team/bajaj.jpg"
-                  class="img-responsive"
+                  data-src="images/team/bajaj.jpg"
+                  class="img-responsive lazy-img"
                   alt=""
                 />
                 <div class="team-details">
@@ -857,8 +867,8 @@
             <div class="col-md-3 col-sm-6">
               <div class="team-member">
                 <img
-                  src="images/team/dowells.png"
-                  class="img-responsive"
+                  data-src="images/team/dowells.png"
+                  class="img-responsive lazy-img"
                   alt=""
                 />
                 <div class="team-details">
@@ -874,8 +884,8 @@
             <div class="col-md-3 col-sm-6">
               <div class="team-member">
                 <img
-                  src="images/team/iskra.jpg"
-                  class="img-responsive"
+                  data-src="images/team/iskra.jpg"
+                  class="img-responsive lazy-img"
                   alt=""
                 />
                 <div class="team-details">
@@ -889,8 +899,8 @@
             <div class="col-md-3 col-sm-6">
               <div class="team-member">
                 <img
-                  src="images/team/motwane.jpg"
-                  class="img-responsive"
+                  data-src="images/team/motwane.jpg"
+                  class="img-responsive lazy-img"
                   alt=""
                 />
                 <div class="team-details">
@@ -903,8 +913,8 @@
             <div class="col-md-3 col-sm-6">
               <div class="team-member">
                 <img
-                  src="images/team/megger.jpg"
-                  class="img-responsive"
+                  data-src="images/team/megger.jpg"
+                  class="img-responsive lazy-img"
                   alt=""
                 />
                 <div class="team-details">
@@ -917,8 +927,8 @@
             <div class="col-md-3 col-sm-6">
               <div class="team-member">
                 <img
-                  src="images/team/gemini pipes.jpg"
-                  class="img-responsive"
+                  data-src="images/team/gemini pipes.jpg"
+                  class="img-responsive lazy-img"
                   alt=""
                 />
                 <div class="team-details">
@@ -931,8 +941,8 @@
             <div class="col-md-3 col-sm-6">
               <div class="team-member">
                 <img
-                  src="images/team/polycab.jpg"
-                  class="img-responsive"
+                  data-src="images/team/polycab.jpg"
+                  class="img-responsive lazy-img"
                   alt=""
                 />
                 <div class="team-details">
@@ -945,8 +955,8 @@
             <div class="col-md-3 col-sm-6">
               <div class="team-member">
                 <img
-                  src="images/team/finolex.jpg"
-                  class="img-responsive"
+                  data-src="images/team/finolex.jpg"
+                  class="img-responsive lazy-img"
                   alt=""
                 />
                 <div class="team-details">
@@ -959,8 +969,8 @@
             <div class="col-md-3 col-sm-6">
               <div class="team-member">
                 <img
-                  src="images/team/neptune.jpg"
-                  class="img-responsive"
+                  data-src="images/team/neptune.jpg"
+                  class="img-responsive lazy-img"
                   alt=""
                 />
                 <div class="team-details">
@@ -975,8 +985,8 @@
             <div class="col-md-3 col-sm-6">
               <div class="team-member">
                 <img
-                  src="images/team/lscables.jpg"
-                  class="img-responsive"
+                  data-src="images/team/lscables.jpg"
+                  class="img-responsive lazy-img"
                   alt=""
                 />
                 <div class="team-details">
@@ -991,8 +1001,8 @@
             <div class="col-md-3 col-sm-6">
               <div class="team-member">
                 <img
-                  src="images/team/jindal.jpg"
-                  class="img-responsive"
+                  data-src="images/team/jindal.jpg"
+                  class="img-responsive lazy-img"
                   alt=""
                 />
                 <div class="team-details">
@@ -1007,8 +1017,8 @@
             <div class="col-md-3 col-sm-6">
               <div class="team-member">
                 <img
-                  src="images/team/kalpa.png"
-                  class="img-responsive"
+                  data-src="images/team/kalpa.png"
+                  class="img-responsive lazy-img"
                   alt=""
                 />
                 <div class="team-details">
@@ -1022,7 +1032,7 @@
 
             <div class="col-md-3 col-sm-6">
               <div class="team-member">
-                <img src="images/team/ebm.jpeg" class="img-responsive" alt="" />
+                <img data-src="images/team/ebm.jpeg" class="img-responsive lazy-img" alt="" />
                 <div class="team-details">
                   <h4>EBM</h4>
                   <h4>
@@ -1037,8 +1047,8 @@
             <div class="col-md-3 col-sm-6">
               <div class="team-member">
                 <img
-                  src="images/team/gemscab.JPG"
-                  class="img-responsive"
+                  data-src="images/team/gemscab.JPG"
+                  class="img-responsive lazy-img"
                   alt=""
                 />
                 <div class="team-details">
@@ -1051,7 +1061,7 @@
             <!--
                         <div class="col-md-3 col-sm-6">
                             <div class="team-member">
-                                <img src="images/team/yamunadensons.png" class="img-responsive" alt="">
+                                <img src="images/team/yamunadensons.png" class="img-responsive lazy-img" alt="">
                                 <div class="team-details">
                                     <h4>Denson</h4>
 
@@ -1062,7 +1072,7 @@
                         
                         <div class="col-md-3 col-sm-6">
                             <div class="team-member">
-                                <img src="images/team/lamco2.jpg" class="img-responsive" alt="">
+                                <img src="images/team/lamco2.jpg" class="img-responsive lazy-img" alt="">
                                 <div class="team-details">
                                     <h4>LAMCO</h4>
                                    <h4><a href = "http://www.lamcoindia.com/">Visit Website</a></h4>
@@ -1230,6 +1240,7 @@
           <script async defer src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
           <script async defer src="js/financials.js"></script>
           <script src="js/loading.js"></script>
+          <script src="js/index.js"></script>
           
         </div>
       </div>
