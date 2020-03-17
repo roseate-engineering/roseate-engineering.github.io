@@ -969,3 +969,7 @@ and (max-width : 991px) {
     padding: 20px;
     color: #fff;
 }
+
+#citations{
+    display: none;
+}
