@@ -11,8 +11,8 @@ letters.forEach(function (letter, i) {
 window.onload = function(event){
     Array.from(this.document.getElementsByClassName("initially-hidden")).forEach(function(element, index, _){
         element.style.visibility = "visible";
-        const loading = document.getElementById("loading");
-        loading.parentNode.removeChild(loading);
     })
+    const loading = document.getElementById("loading");
+    loading.parentNode.removeChild(loading);
 }
 
