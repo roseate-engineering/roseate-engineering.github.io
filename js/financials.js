@@ -4,7 +4,7 @@ drawChart = function (event) {
     var chart = new CanvasJS.Chart("chartContainer", {
         animationEnabled: true,
         theme: "light2",
-        width: this.window.screen.width*0.9,
+        width: this.window.screen.width*0.8,
         title:{
             text: "Sales Turnover (INR)"
         },
@@ -18,7 +18,7 @@ drawChart = function (event) {
                 { label: "2016-17", y: 8708000 },
                 { label: "2017-18", y: 10065000},
                 { label: "2018-19", y: 17425000 },
-                { label: "2019-20", y: 21000000 },
+                { label: "2019-20", y: 21580000 },
             ]
         }]
     });
