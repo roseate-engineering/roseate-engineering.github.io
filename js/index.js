@@ -3,6 +3,8 @@ const lazyLoad = function(){
     for (lazyImage of lazyImages){
         lazyImage.src = lazyImage.dataset.src 
     }
+    const slideshow = document.getElementById('slideshow');
 }
 
 document.addEventListener("DOMContentLoaded", lazyLoad);
+
