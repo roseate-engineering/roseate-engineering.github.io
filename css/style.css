@@ -694,6 +694,10 @@ fieldset[disabled] .btn-primary.active {
     -webkit-animation-duration: 300ms;
 }
 
+.canvasjs-chart-credit {
+    display: none;
+}
+
 /**** Start Latest News Section ****/
 
 .latest-post {
