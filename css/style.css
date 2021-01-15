@@ -698,6 +698,10 @@ fieldset[disabled] .btn-primary.active {
     display: none;
 }
 
+.white-link {
+    color: #eee;
+}
+
 /**** Start Latest News Section ****/
 
 .latest-post {
