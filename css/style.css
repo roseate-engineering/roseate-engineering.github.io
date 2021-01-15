@@ -625,7 +625,7 @@ fieldset[disabled] .btn-primary.active {
     margin-bottom: 30px;
 }
 
-.team-details {
+.org {
     font-family: "Open Sans", sans-serif;
     padding-left: 10px;
     position: absolute;
@@ -641,7 +641,7 @@ fieldset[disabled] .btn-primary.active {
     height: auto;
 }
 
-.team-details h4 {
+.org h4 {
     font-size: 25px;
     font-weight: 300;
     color: #ff432e;
@@ -651,23 +651,32 @@ fieldset[disabled] .btn-primary.active {
     padding-top: 20%;
 }
 
-.team-details .designation {
+.org .designation {
     font-size: 16px;
     font-weight: 300;
     color: #fff;
     text-align: center;
 }
 
-.team-details ul {
+.org ul {
     padding-top: 40%;
 }
-.team-details li {
+.org li {
     display: inline-block;
     list-style: none;
     padding-right: 10px;
 }
 
-.team-details li a {
+.org h4 a {
+    text-decoration: none;
+    color: #ddd
+}
+
+.org h4 a:hover {
+    color: #aaa
+}
+
+.org li a {
     padding: 5px 8px;
     background: #ff432e;
     color: #fff;
@@ -677,7 +686,7 @@ fieldset[disabled] .btn-primary.active {
     border-radius: 2px;
 }
 
-.team-member:hover .team-details {
+.team-member:hover .org {
     opacity: 1;
     -webkit-animation: pulse;
     animation: pulse;
