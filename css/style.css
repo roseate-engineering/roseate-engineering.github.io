@@ -702,6 +702,10 @@ fieldset[disabled] .btn-primary.active {
     color: #eee;
 }
 
+.white-link:hover {
+    color: #ccc;
+}
+
 /**** Start Latest News Section ****/
 
 .latest-post {
