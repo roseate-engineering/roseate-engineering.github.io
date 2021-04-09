@@ -1,876 +1,702 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable = no" />
-        <meta
-            name="google-site-verification"
-            content="fKQCdbExz2EM93xziTwXEPm1wPeTKr5zXo9wfMgTHDo"
-        />
-        <meta name="description" content="" />
-        <meta name="author" content="Sanchit Batra" />
 
-        <title>Roseate</title>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable = no" />
+    <meta name="google-site-verification" content="fKQCdbExz2EM93xziTwXEPm1wPeTKr5zXo9wfMgTHDo" />
+    <meta name="description" content="" />
+    <meta name="author" content="Sanchit Batra" />
 
-        <!-- Bootstrap Core CSS -->
-        <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <title>Roseate</title>
 
-        <!-- Font Awesome CSS -->
-        <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <!-- Bootstrap Core CSS -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
 
-        <!-- Custom CSS -->
-        <link href="css/animate.css" rel="stylesheet" />
+    <!-- Font Awesome CSS -->
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
 
-        <!-- Custom CSS -->
-        <link href="css/style.css" rel="stylesheet" />
-        <style>
-            @media screen and (max-width: 1023px) {
-                #adjust {
-                    display: none;
-                }
+    <!-- Custom CSS -->
+    <link href="css/animate.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet" />
+    <style>
+        @media screen and (max-width: 1023px) {
+            #adjust {
+                display: none;
             }
-        </style>
+        }
+    </style>
 
-        <!-- Custom Fonts -->
-        <link
-            href="http://fonts.googleapis.com/css?family=Lobster"
-            rel="stylesheet"
-            type="text/css"
-        />
+    <!-- Custom Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css" />
 
-        <link href="css/loading.css" rel="stylesheet" type="text/css" />
+    <link href="css/loading.css" rel="stylesheet" type="text/css" />
 
-        <!-- favicon-->
-        <link rel="shortcut icon" href="images/logo.png" type="image/png" />
-        <link rel="icon" href="images/logo.png" type="image/png" />
+    <!-- favicon-->
+    <link rel="shortcut icon" href="images/logo.png" type="image/png" />
+    <link rel="icon" href="images/logo.png" type="image/png" />
 
-        <!-- Template js -->
-        <script async src="js/jquery-2.1.1.min.js"></script>
+    <!-- Template js -->
+    <script async src="js/jquery-2.1.1.min.js"></script>
 
-        <!-- Lazy load images-->
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.0/lazysizes.min.js"
-            async
-        ></script>
+    <!-- Lazy load images-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.0/lazysizes.min.js" async></script>
 
-        <!--<script src="https://cdn.jsdelivr.net/npm/vue"></script>-->
+    <!--<script src="https://cdn.jsdelivr.net/npm/vue"></script>-->
 
-        <!--[if lt IE 9]>
+    <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
-    </head>
+</head>
 
-    <div class="loading" id="loading">Loading</div>
+<div class="loading" id="loading">Loading</div>
 
-    <body>
-        <!-- Start Logo Section -->
+<body>
+    <!-- Start Logo Section -->
 
-        <section id="logo-section" class="text-center initially-hidden">
+    <section id="logo-section" class="text-center initially-hidden">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12" style="position: relative; top: 5em;">
+                    <img src="images/logo.png" alt="" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Logo Section -->
+
+    <!-- Start Main Body Section -->
+    <div class="mainbody-section text-center initially-hidden">
+        <div class="container">
+            <div class="row" id="menu-item-row">
+                <div class="col-md-3">
+                    <div class="menu-item green">
+                        <a href="#about-modal" data-toggle="modal" class="menu-modal">
+                            <i class="fa fa-magic"></i>
+                            <p>About Us</p>
+                        </a>
+                    </div>
+
+                    <div class="menu-item blue">
+                        <a href="#solutions-modal" data-toggle="modal" class="menu-modal">
+                            <i class="fa fa-file-photo-o"></i>
+                            <p>Solutions and Services</p>
+                        </a>
+                    </div>
+
+                    <div class="menu-item green">
+                        <a href="#accreditations-modal" data-toggle="modal" class="menu-modal">
+                            <i class="fa fa-user"></i>
+                            <p>Accreditations</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-lg-6" id="adjust">
+                            <div class="menu-item responsive">
+                                <a href="#customers-modal" data-toggle="modal" style="visibility:hidden"
+                                    class="menu-modal">
+                                    <i class="fa fa-area-chart"></i>
+                                    <p>Our Esteemed Customers</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="menu-item green responsive">
+                                <a href="#customers-modal" data-toggle="modal" class="menu-modal">
+                                    <i class="fa fa-mortar-board"></i>
+                                    <p>Our Esteemed Customers</p>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="menu-item blue responsive-2">
+                                <a href="#associate-modal" data-toggle="modal" class="menu-modal">
+                                    <i class="fa fa-users"></i>
+                                    <p>Vendors</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="menu-item blue">
+                        <a href="#testimonial-modal" data-toggle="modal" class="menu-modal">
+                            <i class="fa fa-area-chart"></i>
+                            <p>Financials</p>
+                        </a>
+                    </div>
+
+                    <div class="menu-item green">
+                        <a href="#contact-modal" data-toggle="modal" class="menu-modal">
+                            <i class="fa fa-comment-o"></i>
+                            <p>Contact Form</p>
+                        </a>
+                    </div>
+
+                    <div class="menu-item blue">
+                        <a href="#price-modal" data-toggle="modal" class="menu-modal">
+                            <i class="fa fa-envelope-o"></i>
+                            <p>Price Lists</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Main Body Section -->
+
+    <!-- Start Copyright Section -->
+    <div class="copyright text-center initially-hidden">
+        <h6>Copyright &copy; Roseate 2021</h6>
+        <h6>Developed by <a href="https://sanchitcop19.github.io" class="white-link">Sanchit Batra</a></h6>
+        <h6 style="font-size:0.6em">
+            This website was made using a Bootstrap Template from
+            <a href="https://graygrids.com/" class="white-link">GrayGrids</a>. Copyright infringement of any kind
+            is not intended.
+        </h6>
+    </div>
+    <!-- End Copyright Section -->
+
+    <!-- Start About Us Section -->
+    <div class="section-modal modal fade" id="about-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl"></div>
+                </div>
+            </div>
+
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12" style="position: relative; top: 5em;">
-                        <img src="images/logo.png" alt="" />
+                    <div class="section-title text-center">
+                        <h3 style="color: black !important;">About Us</h3>
+                        <br />
                     </div>
                 </div>
-            </div>
-        </section>
-        <!-- End Logo Section -->
-
-        <!-- Start Main Body Section -->
-        <div class="mainbody-section text-center initially-hidden">
-            <div class="container">
-                <div class="row" id="menu-item-row">
-                    <div class="col-md-3">
-                        <div class="menu-item green">
-                            <a href="#about-modal" data-toggle="modal" class="menu-modal">
-                                <i class="fa fa-magic"></i>
-                                <p>About Us</p>
-                            </a>
-                        </div>
-
-                        <div class="menu-item blue">
-                            <a href="#solutions-modal" data-toggle="modal" class="menu-modal">
-                                <i class="fa fa-file-photo-o"></i>
-                                <p>Solutions and Services</p>
-                            </a>
-                        </div>
-
-                        <div class="menu-item green">
-                            <a href="#accreditations-modal" data-toggle="modal" class="menu-modal">
-                                <i class="fa fa-user"></i>
-                                <p>Accreditations</p>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="row">
-                            <div class="col-lg-6" id="adjust">
-                                <div class="menu-item responsive">
-                                    <a
-                                        href="#customers-modal"
-                                        data-toggle="modal"
-                                        style="visibility:hidden"
-                                        class="menu-modal"
-                                    >
-                                        <i class="fa fa-area-chart"></i>
-                                        <p>Our Esteemed Customers</p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="menu-item green responsive">
-                                    <a
-                                        href="#customers-modal"
-                                        data-toggle="modal"
-                                        class="menu-modal"
-                                    >
-                                        <i class="fa fa-mortar-board"></i>
-                                        <p>Our Esteemed Customers</p>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6">
-                                <div class="menu-item blue responsive-2">
-                                    <a
-                                        href="#associate-modal"
-                                        data-toggle="modal"
-                                        class="menu-modal"
-                                    >
-                                        <i class="fa fa-users"></i>
-                                        <p>Vendors</p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="menu-item blue">
-                            <a href="#testimonial-modal" data-toggle="modal" class="menu-modal">
-                                <i class="fa fa-area-chart"></i>
-                                <p>Financials</p>
-                            </a>
-                        </div>
-
-                        <div class="menu-item green">
-                            <a href="#contact-modal" data-toggle="modal" class="menu-modal">
-                                <i class="fa fa-comment-o"></i>
-                                <p>Contact Form</p>
-                            </a>
-                        </div>
-
-                        <div class="menu-item blue">
-                            <a href="#price-modal" data-toggle="modal" class="menu-modal">
-                                <i class="fa fa-envelope-o"></i>
-                                <p>Price Lists</p>
-                            </a>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="about-text">
+                            <p style="color:black !important;">
+                                We are a professionally managed and technology driven
+                                organization which firmly believes in providing affordable
+                                techno-commercial solutions to all our esteemed customers. We
+                                offer solutions to all your electrical and allied requirements
+                                in supply chain management.
+                            </p>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <!-- End Main Body Section -->
-
-        <!-- Start Copyright Section -->
-        <div class="copyright text-center initially-hidden">
-            <h6>Copyright &copy; Roseate 2021</h6>
-            <h6>Developed by <a href="https://sanchitcop19.github.io" class = "white-link">Sanchit Batra</a></h6>
-            <h6 style="font-size:0.6em">
-                This website was made using a Bootstrap Template from
-                <a href="https://graygrids.com/" class = "white-link">GrayGrids</a>. Copyright infringement of any kind
-                is not intended.
-            </h6>
-        </div>
-        <!-- End Copyright Section -->
-
-        <!-- Start About Us Section -->
-        <div
-            class="section-modal modal fade"
-            id="about-modal"
-            tabindex="-1"
-            role="dialog"
-            aria-hidden="true"
-        >
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
-                </div>
-
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title text-center">
-                            <h3 style="color: black !important;">About Us</h3>
+                <!-- /.row -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="custom-tab">
+                            <h1 style="font-size:150%; color:black !important;" class="text-center">
+                                <u>Our Vision</u>
+                            </h1>
                             <br />
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="about-text">
-                                <p style="color:black !important;">
-                                    We are a professionally managed and technology driven
-                                    organization which firmly believes in providing affordable
-                                    techno-commercial solutions to all our esteemed customers. We
-                                    offer solutions to all your electrical and allied requirements
-                                    in supply chain management.
+
+                            <div class="tab-pane active" id="tab-2">
+                                <p style="color: black !important;">
+                                    We are pledged to offer end to end technology driven
+                                    renewable energy solutions and effective power distribution
+                                    till 33kV application. As a company, we shall endeavour to
+                                    become a one-stop solution for all our esteemed customers by
+                                    offering authentic techno-commercial portfolios in power
+                                    distribution from low voltage (415V) to medium voltage
+                                    (33kV) application.
                                 </p>
                             </div>
                         </div>
+                        <!-- /.tab-content -->
                     </div>
-                    <!-- /.row -->
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="custom-tab">
-                                <h1
-                                    style="font-size:150%; color:black !important;"
-                                    class="text-center"
-                                >
-                                    <u>Our Vision</u>
-                                </h1>
-                                <br />
-
-                                <div class="tab-pane active" id="tab-2">
-                                    <p style="color: black !important;">
-                                        We are pledged to offer end to end technology driven
-                                        renewable energy solutions and effective power distribution
-                                        till 33kV application. As a company, we shall endeavour to
-                                        become a one-stop solution for all our esteemed customers by
-                                        offering authentic techno-commercial portfolios in power
-                                        distribution from low voltage (415V) to medium voltage
-                                        (33kV) application.
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- /.tab-content -->
-                        </div>
-                    </div>
-                    <br /><br />
-                    <div class="row">
-                        <div class="col-sm-8 col-sm-offset-4" style="overflow-x:none" id="slideshow">
-                            <iframe
-                                src="https://docs.google.com/presentation/d/e/2PACX-1vT22m7ddX72CC9QmNQgi0PFwKilfELYr2f_Ssqo1qb1nFS0jj2EbTwLsEMTGYbJc6DnJ8Nk_NiAkrfI/embed?start=false&loop=true&delayms=5000"
-                                frameborder="0"
-                                allowfullscreen="true"
-                                mozallowfullscreen="true"
-                                webkitallowfullscreen="true"
-                            ></iframe>
-                            <br />
-                        </div>
-                    </div>
-                    <div class="row">
-                        <h1 style="font-size:150%;color:black !important;" class="text-center">
-                            <u>Our Location</u>
-                        </h1>
+                </div>
+                <br /><br />
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-4" style="overflow-x:none" id="slideshow">
+                        <iframe
+                            src="https://docs.google.com/presentation/d/e/2PACX-1vT22m7ddX72CC9QmNQgi0PFwKilfELYr2f_Ssqo1qb1nFS0jj2EbTwLsEMTGYbJc6DnJ8Nk_NiAkrfI/embed?start=false&loop=true&delayms=5000"
+                            frameborder="0" allowfullscreen="true" mozallowfullscreen="true"
+                            webkitallowfullscreen="true"></iframe>
                         <br />
-                        <div class="col-sm-6 col-sm-offset-3">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.7147375505056!2d77.12388431475433!3d28.698178687858345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d03dd848cf4cb%3A0x8a728ab930f45940!2sC-444%2C+Block+C%2C+Saraswati+Vihar%2C+Pitampura%2C+Delhi%2C+110034%2C+India!5e0!3m2!1sen!2sus!4v1491102606282"
-                                width="600"
-                                height="450"
-                                frameborder="0"
-                                style="border:0"
-                                allowfullscreen
-                            ></iframe>
-                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <h1 style="font-size:150%;color:black !important;" class="text-center">
+                        <u>Our Location</u>
+                    </h1>
+                    <br />
+                    <div class="col-sm-6 col-sm-offset-3">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.7147375505056!2d77.12388431475433!3d28.698178687858345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d03dd848cf4cb%3A0x8a728ab930f45940!2sC-444%2C+Block+C%2C+Saraswati+Vihar%2C+Pitampura%2C+Delhi%2C+110034%2C+India!5e0!3m2!1sen!2sus!4v1491102606282"
+                            width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- End About Us Section -->
+    <!-- End About Us Section -->
 
-        <!-- Start Accreditations Section -->
-        <div
-            class="section-modal modal fade"
-            id="accreditations-modal"
-            tabindex="-1"
-            role="dialog"
-            aria-hidden="true"
-        >
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
+    <!-- Start Accreditations Section -->
+    <div class="section-modal modal fade" id="accreditations-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl"></div>
                 </div>
-                <div class="section-title text-center">
-                    <h3 style="color:black !important;">Accreditations</h3>
-                    <br /><br />
-                </div>
-                <div class="container">
-                    <div class="col-sm-12 acc-img">
-                        <img
-                            data-src="accreditations/capsugel.jpg"
-                            style="height:80%;width:49%;margin: 3px; border: 3px solid #00004d;"
-                            class="lazy-img"
-                        />
-                        <img
-                            data-src="accreditations/inox.jpg"
-                            style="height:80%;width:49%;margin: 3px; border: 3px solid #00004d;"
-                            class="lazy-img"
-                        />
-                        <img
-                            data-src="accreditations/usl.jpg"
-                            style="height:80%;width:49%;margin: 3px; border: 3px solid #00004d;"
-                            class="lazy-img"
-                        />
-                        <img
-                            data-src="accreditations/iskra.jpg"
-                            style="height:80%;width:49%;margin: 3px;border: 3px solid #00004d;"
-                            class="lazy-img"
-                        />
-                        <img
-                            data-src="accreditations/ndmc.jpg"
-                            style="height:80%;width:49%;margin: 3px; border: 3px solid #00004d;"
-                            class="lazy-img"
-                        />
-                        <img
-                            data-src="accreditations/kalpa.jpg"
-                            style="height:80%;width:49%;margin: 3px; border: 3px solid #00004d;"
-                            class="lazy-img"
-                        />
-                    </div>
+            </div>
+            <div class="section-title text-center">
+                <h3 style="color:black !important;">Accreditations</h3>
+                <br /><br />
+            </div>
+            <div class="container">
+                <div class="col-sm-12 acc-img">
+                    <img data-src="accreditations/capsugel.jpg"
+                        style="height:80%;width:49%;margin: 3px; border: 3px solid #00004d;" class="lazy-img" />
+                    <img data-src="accreditations/inox.jpg"
+                        style="height:80%;width:49%;margin: 3px; border: 3px solid #00004d;" class="lazy-img" />
+                    <img data-src="accreditations/usl.jpg"
+                        style="height:80%;width:49%;margin: 3px; border: 3px solid #00004d;" class="lazy-img" />
+                    <img data-src="accreditations/iskra.jpg"
+                        style="height:80%;width:49%;margin: 3px;border: 3px solid #00004d;" class="lazy-img" />
+                    <img data-src="accreditations/ndmc.jpg"
+                        style="height:80%;width:49%;margin: 3px; border: 3px solid #00004d;" class="lazy-img" />
+                    <img data-src="accreditations/kalpa.jpg"
+                        style="height:80%;width:49%;margin: 3px; border: 3px solid #00004d;" class="lazy-img" />
                 </div>
             </div>
         </div>
-        <!-- End Accreditations Section -->
+    </div>
+    <!-- End Accreditations Section -->
 
-        <!-- Start Solutions and Services Section -->
-        <div
-            class="section-modal modal fade"
-            id="solutions-modal"
-            tabindex="-1"
-            role="dialog"
-            aria-hidden="true"
-        >
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
+    <!-- Start Solutions and Services Section -->
+    <div class="section-modal modal fade" id="solutions-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl"></div>
                 </div>
+            </div>
 
-                <div class="container">
-                    <div class="col-sm-10 col-sm-offset-1">
-                        <div class="section-title text-center">
-                            <h3 style="color:black !important;">Solutions and Services</h3>
-                            <br /><br />
-                        </div>
-                        <ul class="list-group">
-                            <li style="color:black !important;" class="list-group-item">
-                                PCC and MCC panels
-                            </li>
-                            <li style="color:black !important;" class="list-group-item">
-                                Draw out panels
-                            </li>
-                            <li style="color:black !important;" class="list-group-item">
-                                VFD and PLC controlled panels
-                            </li>
-                            <li style="color:black !important;" class="list-group-item">
-                                Unmanned Substations
-                            </li>
-                            <li style="color:black !important;" class="list-group-item">
-                                Automatic circuit reclosers and sectionalizers
-                            </li>
-                            <li style="color:black !important;" class="list-group-item">
-                                GIS solutions for power distribution till 220kV
-                            </li>
-                            <li style="color:black !important;" class="list-group-item">
-                                Feeder Pillars for Power Discoms
-                            </li>
-                            <li style="color:black !important;" class="list-group-item">
-                                MV panels till 33kV
-                            </li>
-                            <li style="color:black !important;" class="list-group-item">
-                                CR panels till 220KV
-                            </li>
-                            <li style="color:black !important;" class="list-group-item">
-                                Compact sub-stations till 33kV
-                            </li>
-                            <li style="color:black !important;" class="list-group-item">
-                                Indoor and outdoor VCB panels till 33kV
-                            </li>
-                            <li style="color:black !important;" class="list-group-item">
-                                KIOSK panels till 33kV
-                            </li>
-                            <li style="color:black !important;" class="list-group-item">
-                                Solar street lighting till 40Watts (standalone)
-                            </li>
-                            <li style="color:black !important;" class="list-group-item">
-                                Off Grid Solar PV plants for domestic applications
-                            </li>
-                            <li style="color:black !important;" class="list-group-item">
-                                ON Grid Power plants solutions (AC side) till 1MW
-                            </li>
-                            <li style="color:black !important;" class="list-group-item">
-                                Hardware for SOLAR PV panels
-                            </li>
-                            <li style="color:black !important;" class="list-group-item">
-                                Fault passage indicators for transmission lines
-                            </li>
-                            <li style="color:black !important;" class="list-group-item">
-                                ACSR/TACSR conductors for effective transmission
-                            </li>
-                            <li style="color:black !important;" class="list-group-item">
-                                Access Control and CCTV solutions
-                            </li>
-                            <li style="color:black !important;" class="list-group-item">
-                                Power and control cables and their jointing kits and terminations
-                            </li>
-                            <li style="color:black !important;" class="list-group-item">
-                                Power and distrubution transformers.
-                            </li>
-                            <li style="color:black !important;" class="list-group-item">
-                                Bushings and insulators
-                            </li>
-                            <li style="color:black !important;" class="list-group-item">
-                                Capacitors, Detuned Filters and APFC panels
-                            </li>
-                            <li style="color:black !important;" class="list-group-item">
-                                Renewable Energy Solutions through Solar PV plants from 3kW - 1MW
-                                and solar thermal plants from 300LPD - 2000LPD
-                            </li>
-                            <li style="color:black !important;" class="list-group-item">
-                                Power saving energy saving solutions through LEDs and standalone
-                                solar street lighting
-                            </li>
-                            <li style="color:black !important;" class="list-group-item">
-                                Designing of power saving technologies by effective and optimum
-                                usage of products
-                            </li>
-                            <li style="color:black !important;" class="list-group-item">
-                                Authentic solutions for power distribution in LV and MV as per IS
-                                and IEC standards
-                            </li>
-                            <li style="color:black !important;" class="list-group-item">
-                                Effective consultancy services for designing of power and
-                                distribution transformers, MV panels, LV panels, AJB, MJB
-                            </li>
-                            <li style="color:black !important;" class="list-group-item">
-                                Effective and technology driven solutions for maintenance free
-                                earthing
-                            </li>
-                            <li style="color:black !important;" class="list-group-item">
-                                Preparation of cost effective solutions for tenders with value for
-                                money and state of the art technology driven products.
-                            </li>
-                            <li style="color:black !important;" class="list-group-item">
-                                Manpower consultancy for solutions for effective and pragmatic
-                                professionals
-                            </li>
-                            <li style="color:black !important;" class="list-group-item">
-                                Training on the switchgear and control gear fundamentals
-                            </li>
-                            <li style="color:black !important;" class="list-group-item">
-                                Effective and presentable communication techniques for professionals
-                            </li>
-                        </ul>
+            <div class="container">
+                <div class="col-sm-10 col-sm-offset-1">
+                    <div class="section-title text-center">
+                        <h3 style="color:black !important;">Solutions and Services</h3>
+                        <br /><br />
                     </div>
+                    <ul class="list-group">
+                        <li style="color:black !important;" class="list-group-item">
+                            PCC and MCC panels
+                        </li>
+                        <li style="color:black !important;" class="list-group-item">
+                            Draw out panels
+                        </li>
+                        <li style="color:black !important;" class="list-group-item">
+                            VFD and PLC controlled panels
+                        </li>
+                        <li style="color:black !important;" class="list-group-item">
+                            Unmanned Substations
+                        </li>
+                        <li style="color:black !important;" class="list-group-item">
+                            Automatic circuit reclosers and sectionalizers
+                        </li>
+                        <li style="color:black !important;" class="list-group-item">
+                            GIS solutions for power distribution till 220kV
+                        </li>
+                        <li style="color:black !important;" class="list-group-item">
+                            Feeder Pillars for Power Discoms
+                        </li>
+                        <li style="color:black !important;" class="list-group-item">
+                            MV panels till 33kV
+                        </li>
+                        <li style="color:black !important;" class="list-group-item">
+                            CR panels till 220KV
+                        </li>
+                        <li style="color:black !important;" class="list-group-item">
+                            Compact sub-stations till 33kV
+                        </li>
+                        <li style="color:black !important;" class="list-group-item">
+                            Indoor and outdoor VCB panels till 33kV
+                        </li>
+                        <li style="color:black !important;" class="list-group-item">
+                            KIOSK panels till 33kV
+                        </li>
+                        <li style="color:black !important;" class="list-group-item">
+                            Solar street lighting till 40Watts (standalone)
+                        </li>
+                        <li style="color:black !important;" class="list-group-item">
+                            Off Grid Solar PV plants for domestic applications
+                        </li>
+                        <li style="color:black !important;" class="list-group-item">
+                            ON Grid Power plants solutions (AC side) till 1MW
+                        </li>
+                        <li style="color:black !important;" class="list-group-item">
+                            Hardware for SOLAR PV panels
+                        </li>
+                        <li style="color:black !important;" class="list-group-item">
+                            Fault passage indicators for transmission lines
+                        </li>
+                        <li style="color:black !important;" class="list-group-item">
+                            ACSR/TACSR conductors for effective transmission
+                        </li>
+                        <li style="color:black !important;" class="list-group-item">
+                            Access Control and CCTV solutions
+                        </li>
+                        <li style="color:black !important;" class="list-group-item">
+                            Power and control cables and their jointing kits and terminations
+                        </li>
+                        <li style="color:black !important;" class="list-group-item">
+                            Power and distrubution transformers.
+                        </li>
+                        <li style="color:black !important;" class="list-group-item">
+                            Bushings and insulators
+                        </li>
+                        <li style="color:black !important;" class="list-group-item">
+                            Capacitors, Detuned Filters and APFC panels
+                        </li>
+                        <li style="color:black !important;" class="list-group-item">
+                            Renewable Energy Solutions through Solar PV plants from 3kW - 1MW
+                            and solar thermal plants from 300LPD - 2000LPD
+                        </li>
+                        <li style="color:black !important;" class="list-group-item">
+                            Power saving energy saving solutions through LEDs and standalone
+                            solar street lighting
+                        </li>
+                        <li style="color:black !important;" class="list-group-item">
+                            Designing of power saving technologies by effective and optimum
+                            usage of products
+                        </li>
+                        <li style="color:black !important;" class="list-group-item">
+                            Authentic solutions for power distribution in LV and MV as per IS
+                            and IEC standards
+                        </li>
+                        <li style="color:black !important;" class="list-group-item">
+                            Effective consultancy services for designing of power and
+                            distribution transformers, MV panels, LV panels, AJB, MJB
+                        </li>
+                        <li style="color:black !important;" class="list-group-item">
+                            Effective and technology driven solutions for maintenance free
+                            earthing
+                        </li>
+                        <li style="color:black !important;" class="list-group-item">
+                            Preparation of cost effective solutions for tenders with value for
+                            money and state of the art technology driven products.
+                        </li>
+                        <li style="color:black !important;" class="list-group-item">
+                            Manpower consultancy for solutions for effective and pragmatic
+                            professionals
+                        </li>
+                        <li style="color:black !important;" class="list-group-item">
+                            Training on the switchgear and control gear fundamentals
+                        </li>
+                        <li style="color:black !important;" class="list-group-item">
+                            Effective and presentable communication techniques for professionals
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-        <!-- End Solutions Section -->
+    </div>
+    <!-- End Solutions Section -->
 
-        <!-- Start Customers Section -->
-        <div
-            class="section-modal modal fade"
-            id="customers-modal"
-            tabindex="-1"
-            role="dialog"
-            aria-hidden="true"
-        >
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
+    <!-- Start Customers Section -->
+    <div class="section-modal modal fade" id="customers-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="section-title text-center">
+                        <h3 style="color: black !important">Our Esteemed Customers</h3>
+                        <br /><br /><br />
                     </div>
                 </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title text-center">
-                            <h3 style="color: black !important">Our Esteemed Customers</h3>
-                            <br /><br /><br />
+                <div class="row row-eq-height">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img data-src="images/team/diageo.jpg" class="img-responsive lazy-img" alt="" />
+                            <div class="org">
+                                <h4>Diageo</h4>
+                                <h4><a href="https://www.diageo.com/">Visit website</a></h4>
+                            </div>
                         </div>
                     </div>
-                    <div class="row row-eq-height">
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img
-                                    data-src="images/team/diageo.jpg"
-                                    class="img-responsive lazy-img"
-                                    alt=""
-                                />
-                                <div class="org">
-                                    <h4>Diageo</h4>
-                                    <h4><a href="https://www.diageo.com/">Visit website</a></h4>
-                                </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img data-src="images/team/grinfra.jpg" class="img-responsive lazy-img" alt="" />
+                            <div class="org">
+                                <h4>GR Infra</h4>
+                                <h4><a href="https://grinfra.com/">Visit website</a></h4>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img
-                                    data-src="images/team/grinfra.jpg"
-                                    class="img-responsive lazy-img"
-                                    alt=""
-                                />
-                                <div class="org">
-                                    <h4>GR Infra</h4>
-                                    <h4><a href="https://grinfra.com/">Visit website</a></h4>
-                                </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img data-src="https://roseate.s3.ap-south-1.amazonaws.com/customers/kb.png"
+                                class="img-responsive lazy-img" alt="K.B. Polychem" />
+                            <div class="org">
+                                <h4>K.B. Polychem</h4>
+                                <h4>
+                                    <a href="http://www.kbgroupindia.com/">Visit website</a>
+                                </h4>
                             </div>
                         </div>
-                        
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img
-                                    data-src="https://roseate.s3.ap-south-1.amazonaws.com/customers/kb.png"
-                                    class="img-responsive lazy-img"
-                                    alt="K.B. Polychem"
-                                />
-                                <div class="org">
-                                    <h4>K.B. Polychem</h4>
-                                    <h4>
-                                        <a href="http://www.kbgroupindia.com/">Visit website</a>
-                                    </h4>
-                                </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img data-src="https://roseate.s3.ap-south-1.amazonaws.com/customers/lonza.JPG"
+                                class="img-responsive lazy-img" alt="Lonza" />
+                            <div class="org">
+                                <h4>Lonza</h4>
+                                <h4>
+                                    <a href="https://www.lonza.com/">Visit website</a>
+                                </h4>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img
-                                    data-src="https://roseate.s3.ap-south-1.amazonaws.com/customers/lonza.JPG"
-                                    class="img-responsive lazy-img"
-                                    alt="Lonza"
-                                />
-                                <div class="org">
-                                    <h4>Lonza</h4>
-                                    <h4>
-                                        <a href="https://www.lonza.com/"
-                                            >Visit website</a
-                                        >
-                                    </h4>
-                                </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img data-src="https://roseate.s3.ap-south-1.amazonaws.com/customers/miepl.jpeg"
+                                class="img-responsive lazy-img" alt="" />
+                            <div class="org">
+                                <h4>MIEPL</h4>
+                                <h4>
+                                    <a href="http://miepl.ind.in/">Visit website</a>
+                                </h4>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img
-                                    data-src="https://roseate.s3.ap-south-1.amazonaws.com/customers/miepl.jpeg"
-                                    class="img-responsive lazy-img"
-                                    alt=""
-                                />
-                                <div class="org">
-                                    <h4>MIEPL</h4>
-                                    <h4>
-                                        <a href="http://miepl.ind.in/"
-                                            >Visit website</a
-                                        >
-                                    </h4>
-                                </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img data-src="images/team/dbcorp.png" class="img-responsive lazy-img" alt="" />
+                            <div class="org">
+                                <h4>Dainik Bhaskar</h4>
+                                <h4>
+                                    <a href="https://www.dainikbhaskargroup.com/">Visit website</a>
+                                </h4>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img
-                                    data-src="images/team/dbcorp.png"
-                                    class="img-responsive lazy-img"
-                                    alt=""
-                                />
-                                <div class="org">
-                                    <h4>Dainik Bhaskar</h4>
-                                    <h4>
-                                        <a href="https://www.dainikbhaskargroup.com/"
-                                            >Visit website</a
-                                        >
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
-                        <!--
+                    </div>
+                    <!--
 <div class="col-md-3 col-sm-6">
                             
                         </div>
                         -->
-                        
 
-                
 
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img
-                                    data-src="images/team/daurala_sugar.jpg"
-                                    class="img-responsive lazy-img"
-                                    alt=""
-                                />
-                                <div class="org">
-                                    <h4>Daurala Sugar</h4>
-                                    <h4>
-                                        <a href="http://www.dcmsr.com/sugar_cmplx.html"
-                                            >Visit website</a
-                                        >
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img
-                                    data-src="images/team/rms.JPG"
-                                    class="img-responsive lazy-img"
-                                    alt=""
-                                />
-                                <div class="org">
-                                    <h4>RMS Automation</h4>
-                                    <h4>
-                                        <a href="http://www.rmsautomation.com/">Visit website</a>
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img
-                                    data-src="images/team/essaar.png"
-                                    class="img-responsive lazy-img"
-                                    alt=""
-                                />
-                                <div class="org">
-                                    <h4>ESS AAR</h4>
-                                    <h4><a href="http://www.essaar.com/">Visit website</a></h4>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img
-                                    data-src="images/team/massive.JPG"
-                                    class="img-responsive lazy-img"
-                                    alt=""
-                                />
-                                <div class="org">
-                                    <h4>Massive Engineers</h4>
-                                </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img data-src="images/team/daurala_sugar.jpg" class="img-responsive lazy-img" alt="" />
+                            <div class="org">
+                                <h4>Daurala Sugar</h4>
+                                <h4>
+                                    <a href="http://www.dcmsr.com/sugar_cmplx.html">Visit website</a>
+                                </h4>
                             </div>
                         </div>
-
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img
-                                    data-src="images/team/paradip.jpg"
-                                    class="img-responsive lazy-img"
-                                    alt=""
-                                />
-                                <div class="org">
-                                    <h4>Paradip</h4>
-                                    <h4>
-                                        <a href="http://www.paradipport.gov.in/">Visit website</a>
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img
-                                    data-src="images/team/amplus.png"
-                                    class="img-responsive lazy-img"
-                                    alt=""
-                                />
-                                <div class="org">
-                                    <h4>Amplus</h4>
-                                    <h4>
-                                        <a href="https://www.amplussolar.com/">Visit website</a>
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img
-                                    data-src="images/team/vayamep.jpg"
-                                    class="img-responsive lazy-img"
-                                    alt=""
-                                />
-                                <div class="org">
-                                    <h4>Vayamep</h4>
-                                    <h4><a href="http://www.vayamep.com/">Visit website</a></h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img
-                                    data-src="images/team/jamia-hamdard.jpg"
-                                    class="img-responsive lazy-img"
-                                    alt=""
-                                />
-                                <div class="org">
-                                    <h4>Jamia Hamdard</h4>
-                                    <h4>
-                                        <a href="http://www.jamiahamdard.ac.in/"
-                                            >Visit website</a
-                                        >
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img
-                                    data-src="images/team/lg.png"
-                                    class="img-responsive lazy-img"
-                                    alt=""
-                                />
-                                <div class="org">
-                                    <h4>LG</h4>
-                                    <h4>
-                                        <a href="https://www.lg.com/in"
-                                            >Visit website</a
-                                        >
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img
-                                    data-src="images/team/creative.jpg"
-                                    class="img-responsive lazy-img"
-                                    alt=""
-                                    height="10"
-                                />
-                                <div class="org">
-                                    <br />
-                                    <h4>Creative Entrepreneurs</h4>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img
-                                    data-src="images/team/adcon.JPG"
-                                    class="img-responsive lazy-img"
-                                    alt="Adcon"
-                                />
-                                <div class="org">
-                                    <h4>Adcon Engineers</h4>
-                                    <h4>
-                                        <a href="http://www.adconengineers.com/">Visit website</a>
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img
-                                    data-src="https://roseate.s3.ap-south-1.amazonaws.com/customers/jhs.jpg"
-                                    class="img-responsive lazy-img"
-                                    alt="JHS"
-                                />
-                                <div class="org">
-                                    <h4>JHS</h4>
-                                    <h4>
-                                        <a href="https://www.svendgaard.com/">Visit website</a>
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
-                        
                     </div>
-                    <!-- /.row -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img data-src="images/team/rms.JPG" class="img-responsive lazy-img" alt="" />
+                            <div class="org">
+                                <h4>RMS Automation</h4>
+                                <h4>
+                                    <a href="http://www.rmsautomation.com/">Visit website</a>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img data-src="images/team/essaar.png" class="img-responsive lazy-img" alt="" />
+                            <div class="org">
+                                <h4>ESS AAR</h4>
+                                <h4><a href="http://www.essaar.com/">Visit website</a></h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img data-src="images/team/massive.JPG" class="img-responsive lazy-img" alt="" />
+                            <div class="org">
+                                <h4>Massive Engineers</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img data-src="images/team/paradip.jpg" class="img-responsive lazy-img" alt="" />
+                            <div class="org">
+                                <h4>Paradip</h4>
+                                <h4>
+                                    <a href="http://www.paradipport.gov.in/">Visit website</a>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img data-src="images/team/amplus.png" class="img-responsive lazy-img" alt="" />
+                            <div class="org">
+                                <h4>Amplus</h4>
+                                <h4>
+                                    <a href="https://www.amplussolar.com/">Visit website</a>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img data-src="images/team/vayamep.jpg" class="img-responsive lazy-img" alt="" />
+                            <div class="org">
+                                <h4>Vayamep</h4>
+                                <h4><a href="http://www.vayamep.com/">Visit website</a></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img data-src="images/team/jamia-hamdard.jpg" class="img-responsive lazy-img" alt="" />
+                            <div class="org">
+                                <h4>Jamia Hamdard</h4>
+                                <h4>
+                                    <a href="http://www.jamiahamdard.ac.in/">Visit website</a>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img data-src="images/team/lg.png" class="img-responsive lazy-img" alt="" />
+                            <div class="org">
+                                <h4>LG</h4>
+                                <h4>
+                                    <a href="https://www.lg.com/in">Visit website</a>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img data-src="images/team/creative.jpg" class="img-responsive lazy-img" alt=""
+                                height="10" />
+                            <div class="org">
+                                <br />
+                                <h4>Creative Entrepreneurs</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img data-src="images/team/adcon.JPG" class="img-responsive lazy-img" alt="Adcon" />
+                            <div class="org">
+                                <h4>Adcon Engineers</h4>
+                                <h4>
+                                    <a href="http://www.adconengineers.com/">Visit website</a>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img data-src="https://roseate.s3.ap-south-1.amazonaws.com/customers/jhs.jpg"
+                                class="img-responsive lazy-img" alt="JHS" />
+                            <div class="org">
+                                <h4>JHS</h4>
+                                <h4>
+                                    <a href="https://www.svendgaard.com/">Visit website</a>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
+                <!-- /.row -->
             </div>
         </div>
-        <!--   End Customers Section -->
+    </div>
+    <!--   End Customers Section -->
 
-        <!-- Start Associates Section -->
-        <div
-            class="section-modal modal fade"
-            id="associate-modal"
-            tabindex="-1"
-            role="dialog"
-            aria-hidden="true"
-        >
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
+    <!-- Start Associates Section -->
+    <div class="section-modal modal fade" id="associate-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="section-title text-center">
+                        <h3 style="color: black !important">Vendors</h3>
+                        <br /><br /><br />
                     </div>
                 </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title text-center">
-                            <h3 style="color: black !important">Vendors</h3>
-                            <br /><br /><br />
+
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img data-src="images/team/abb.gif" class="img-responsive lazy-img" alt="" />
+                            <div class="org">
+                                <h4>ABB</h4>
+
+                                <h4><a href="https://new.abb.com/">Visit Website</a></h4>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="row">
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img
-                                    data-src="images/team/abb.gif"
-                                    class="img-responsive lazy-img"
-                                    alt=""
-                                />
-                                <div class="org">
-                                    <h4>ABB</h4>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img data-src="images/team/landt.PNG" class="img-responsive lazy-img" alt="" />
+                            <div class="org">
+                                <h4>L&amp;T</h4>
 
-                                    <h4><a href="https://new.abb.com/">Visit Website</a></h4>
-                                </div>
+                                <h4>
+                                    <a href="http://www.larsentoubro.com">Visit Website</a>
+                                </h4>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img
-                                    data-src="images/team/landt.PNG"
-                                    class="img-responsive lazy-img"
-                                    alt=""
-                                />
-                                <div class="org">
-                                    <h4>L&amp;T</h4>
-
-                                    <h4>
-                                        <a href="http://www.larsentoubro.com">Visit Website</a>
-                                    </h4>
-                                </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img data-src="images/team/schneider.svg" class="img-responsive lazy-img" alt="" />
+                            <div class="org">
+                                <h4>Schneider</h4>
+                                <h4>
+                                    <a href="https://www.schneider-electric.co.in/en/">Visit Website</a>
+                                </h4>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img
-                                    data-src="images/team/schneider.svg"
-                                    class="img-responsive lazy-img"
-                                    alt=""
-                                />
-                                <div class="org">
-                                    <h4>Schneider</h4>
-                                    <h4>
-                                        <a href="https://www.schneider-electric.co.in/en/"
-                                            >Visit Website</a
-                                        >
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- <div class="col-md-3 col-sm-6">
+                    <!-- <div class="col-md-3 col-sm-6">
                             <div class="team-member">
                                 <img data-src="images/team/manage-2.png" class="img-responsive lazy-img" alt="">
                                 <div class="org">
@@ -880,331 +706,345 @@
                             </div>
                         </div> -->
 
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img
-                                    data-src="images/team/philips.png"
-                                    class="img-responsive lazy-img"
-                                    alt=""
-                                />
-                                <div class="org">
-                                    <h4>Philips</h4>
-                                    <h4><a href="http://www.philips.co.in/">Visit Website</a></h4>
-                                </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img data-src="images/team/philips.png" class="img-responsive lazy-img" alt="" />
+                            <div class="org">
+                                <h4>Philips</h4>
+                                <h4><a href="http://www.philips.co.in/">Visit Website</a></h4>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img
-                                    data-src="images/team/siemens.jpg"
-                                    class="img-responsive lazy-img"
-                                    alt=""
-                                />
-                                <div class="org">
-                                    <h4>SIEMENS</h4>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img data-src="images/team/siemens.jpg" class="img-responsive lazy-img" alt="" />
+                            <div class="org">
+                                <h4>SIEMENS</h4>
 
-                                    <h4>
-                                        <a href="http://www.siemens.com/in/en/home.html"
-                                            >Visit website</a
-                                        >
-                                    </h4>
-                                </div>
+                                <h4>
+                                    <a href="http://www.siemens.com/in/en/home.html">Visit website</a>
+                                </h4>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img
-                                    data-src="images/team/crompton.png"
-                                    class="img-responsive lazy-img"
-                                    alt=""
-                                />
-                                <div class="org">
-                                    <h4>Crompton Greaves</h4>
-                                    <h4><a href="http://www.crompton.co.in">Visit Website</a></h4>
-                                </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img data-src="images/team/crompton.png" class="img-responsive lazy-img" alt="" />
+                            <div class="org">
+                                <h4>Crompton Greaves</h4>
+                                <h4><a href="http://www.crompton.co.in">Visit Website</a></h4>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img
-                                    data-src="images/team/ashoka.JPG"
-                                    class="img-responsive lazy-img"
-                                    alt=""
-                                />
-                                <div class="org">
-                                    <h4>Ashoka Switchgear</h4>
-                                    <h4>
-                                        <a href="http://ashokaelectrical.com/">Visit Website</a>
-                                    </h4>
-                                </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img data-src="images/team/ashoka.JPG" class="img-responsive lazy-img" alt="" />
+                            <div class="org">
+                                <h4>Ashoka Switchgear</h4>
+                                <h4>
+                                    <a href="http://ashokaelectrical.com/">Visit Website</a>
+                                </h4>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img
-                                    data-src="https://roseate.s3.ap-south-1.amazonaws.com/vendors/havells.jpg"
-                                    class="img-responsive lazy-img"
-                                    alt="Havells"
-                                />
-                                <div class="org">
-                                    <h4>Havells</h4>
-                                    <h4>
-                                        <a href="https://www.havells.com/">Visit Website</a>
-                                    </h4>
-                                </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img data-src="https://roseate.s3.ap-south-1.amazonaws.com/vendors/havells.jpg"
+                                class="img-responsive lazy-img" alt="Havells" />
+                            <div class="org">
+                                <h4>Havells</h4>
+                                <h4>
+                                    <a href="https://www.havells.com/">Visit Website</a>
+                                </h4>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img
-                                    data-src="https://roseate.s3.ap-south-1.amazonaws.com/vendors/wilo.JPG"
-                                    class="img-responsive lazy-img"
-                                    alt="Wilo"
-                                />
-                                <div class="org">
-                                    <h4>WILO</h4>
-                                    <h4>
-                                        <a href="https://wilo.com/in/en/">Visit Website</a>
-                                    </h4>
-                                </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img data-src="https://roseate.s3.ap-south-1.amazonaws.com/vendors/wilo.JPG"
+                                class="img-responsive lazy-img" alt="Wilo" />
+                            <div class="org">
+                                <h4>WILO</h4>
+                                <h4>
+                                    <a href="https://wilo.com/in/en/">Visit Website</a>
+                                </h4>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img
-                                    data-src="https://roseate.s3.ap-south-1.amazonaws.com/vendors/usha.jpg"
-                                    class="img-responsive lazy-img"
-                                    alt="Usha"
-                                />
-                                <div class="org">
-                                    <h4>Usha</h4>
-                                    <h4>
-                                        <a href="https://www.usha.com/">Visit Website</a>
-                                    </h4>
-                                </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img data-src="https://roseate.s3.ap-south-1.amazonaws.com/vendors/usha.jpg"
+                                class="img-responsive lazy-img" alt="Usha" />
+                            <div class="org">
+                                <h4>Usha</h4>
+                                <h4>
+                                    <a href="https://www.usha.com/">Visit Website</a>
+                                </h4>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img
-                                    data-src="images/team/bajaj.jpg"
-                                    class="img-responsive lazy-img"
-                                    alt=""
-                                />
-                                <div class="org">
-                                    <h4>Bajaj Electricals</h4>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img data-src="images/team/bajaj.jpg" class="img-responsive lazy-img" alt="" />
+                            <div class="org">
+                                <h4>Bajaj Electricals</h4>
 
-                                    <h4>
-                                        <a href="https://www.bajajelectricals.com/"
-                                            >Visit Website</a
-                                        >
-                                    </h4>
-                                </div>
+                                <h4>
+                                    <a href="https://www.bajajelectricals.com/">Visit Website</a>
+                                </h4>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img
-                                    data-src="images/team/dowells.png"
-                                    class="img-responsive lazy-img"
-                                    alt=""
-                                />
-                                <div class="org">
-                                    <h4>Dowells Electricals</h4>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img data-src="images/team/dowells.png" class="img-responsive lazy-img" alt="" />
+                            <div class="org">
+                                <h4>Dowells Electricals</h4>
 
-                                    <h4>
-                                        <a href="http://www.dowellselektro.com/">Visit Website</a>
-                                    </h4>
-                                </div>
+                                <h4>
+                                    <a href="http://www.dowellselektro.com/">Visit Website</a>
+                                </h4>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img
-                                    data-src="images/team/iskra.jpg"
-                                    class="img-responsive lazy-img"
-                                    alt=""
-                                />
-                                <div class="org">
-                                    <h4>ISKRA</h4>
-
-                                    <h4><a href="http://www.iskra.eu">Visit Website</a></h4>
-                                </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img data-src="https://roseate.s3.ap-south-1.amazonaws.com/vendors/hager.png"
+                                class="img-responsive lazy-img" alt="" />
+                            <div class="org">
+                                <h4>Hager</h4>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img
-                                    data-src="images/team/motwane.jpg"
-                                    class="img-responsive lazy-img"
-                                    alt=""
-                                />
-                                <div class="org">
-                                    <h4>Motwane</h4>
-                                    <h4><a href="http://www.motwane.com/">Visit Website</a></h4>
-                                </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img data-src="https://roseate.s3.ap-south-1.amazonaws.com/vendors/socomec.png"
+                                class="img-responsive lazy-img" alt="" />
+                            <div class="org">
+                                <h4>Socomec</h4>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img
-                                    data-src="images/team/megger.jpg"
-                                    class="img-responsive lazy-img"
-                                    alt=""
-                                />
-                                <div class="org">
-                                    <h4>Megger</h4>
-                                    <h4><a href="https://megger.com/">Visit Website</a></h4>
-                                </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img data-src="https://roseate.s3.ap-south-1.amazonaws.com/vendors/Salzer.jpg"
+                                class="img-responsive lazy-img" alt="" />
+                            <div class="org">
+                                <h4>Salzer</h4>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img
-                                    data-src="images/team/gemini pipes.jpg"
-                                    class="img-responsive lazy-img"
-                                    alt=""
-                                />
-                                <div class="org">
-                                    <h4>Gemini Pipes</h4>
-                                    <h4><a href="http://geminipipes.com/">Visit Website</a></h4>
-                                </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img data-src="https://roseate.s3.ap-south-1.amazonaws.com/vendors/Rishabh.svg"
+                                class="img-responsive lazy-img" alt="" />
+                            <div class="org">
+                                <h4>Rishabh</h4>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img
-                                    data-src="images/team/polycab.jpg"
-                                    class="img-responsive lazy-img"
-                                    alt=""
-                                />
-                                <div class="org">
-                                    <h4>Polycab</h4>
-                                    <h4><a href="http://polycab.com/">Visit Website</a></h4>
-                                </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img data-src="https://roseate.s3.ap-south-1.amazonaws.com/vendors/BCH.png"
+                                class="img-responsive lazy-img" alt="" />
+                            <div class="org">
+                                <h4>BCH</h4>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img
-                                    data-src="images/team/finolex.jpg"
-                                    class="img-responsive lazy-img"
-                                    alt=""
-                                />
-                                <div class="org">
-                                    <h4>Finolex</h4>
-                                    <h4><a href="https://finolex.com/">Visit Website</a></h4>
-                                </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img data-src="https://roseate.s3.ap-south-1.amazonaws.com/vendors/Braco.jpg"
+                                class="img-responsive lazy-img" alt="" />
+                            <div class="org">
+                                <h4>Braco</h4>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img
-                                    data-src="images/team/neptune.jpg"
-                                    class="img-responsive lazy-img"
-                                    alt=""
-                                />
-                                <div class="org">
-                                    <h4>Neptune</h4>
-                                    <h4>
-                                        <a href="https://www.neptuneindia.com/">Visit Website</a>
-                                    </h4>
-                                </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img data-src="https://roseate.s3.ap-south-1.amazonaws.com/vendors/RPG.png"
+                                class="img-responsive lazy-img" alt="" />
+                            <div class="org">
+                                <h4>RPG</h4>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img
-                                    data-src="images/team/lscables.jpg"
-                                    class="img-responsive lazy-img"
-                                    alt=""
-                                />
-                                <div class="org">
-                                    <h4>LS Cable &amp; System</h4>
-                                    <h4>
-                                        <a href="http://www.lscns.com/en/main.asp">Visit Website</a>
-                                    </h4>
-                                </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img data-src="https://roseate.s3.ap-south-1.amazonaws.com/vendors/Eaton.png"
+                                class="img-responsive lazy-img" alt="" />
+                            <div class="org">
+                                <h4>Eaton</h4>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img
-                                    data-src="images/team/jindal.jpg"
-                                    class="img-responsive lazy-img"
-                                    alt=""
-                                />
-                                <div class="org">
-                                    <h4>Jindal Power</h4>
-                                    <h4>
-                                        <a href="https://www.jindalpower.com/">Visit Website</a>
-                                    </h4>
-                                </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img data-src="https://roseate.s3.ap-south-1.amazonaws.com/vendors/Syska.png"
+                                class="img-responsive lazy-img" alt="" />
+                            <div class="org">
+                                <h4>Syska</h4>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img
-                                    data-src="images/team/kalpa.png"
-                                    class="img-responsive lazy-img"
-                                    alt=""
-                                />
-                                <div class="org">
-                                    <h4>Kalpa</h4>
-                                    <h4>
-                                        <a href="http://kalpaelectrikal.com/">Visit Website</a>
-                                    </h4>
-                                </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img data-src="https://roseate.s3.ap-south-1.amazonaws.com/vendors/C%26S.svg"
+                                class="img-responsive lazy-img" alt="" />
+                            <div class="org">
+                                <h4>C&S</h4>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img
-                                    data-src="images/team/ebm.jpeg"
-                                    class="img-responsive lazy-img"
-                                    alt=""
-                                />
-                                <div class="org">
-                                    <h4>EBM</h4>
-                                    <h4>
-                                        <a href="http://www.ebmpapst.in/index.html"
-                                            >Visit Website</a
-                                        >
-                                    </h4>
-                                </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img data-src="images/team/iskra.jpg" class="img-responsive lazy-img" alt="" />
+                            <div class="org">
+                                <h4>ISKRA</h4>
+
+                                <h4><a href="http://www.iskra.eu">Visit Website</a></h4>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img
-                                    data-src="images/team/gemscab.JPG"
-                                    class="img-responsive lazy-img"
-                                    alt=""
-                                />
-                                <div class="org">
-                                    <h4>Gemscab Cables</h4>
-                                    <h4><a href="http://www.gemscab.com/">Visit Website</a></h4>
-                                </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img data-src="images/team/motwane.jpg" class="img-responsive lazy-img" alt="" />
+                            <div class="org">
+                                <h4>Motwane</h4>
+                                <h4><a href="http://www.motwane.com/">Visit Website</a></h4>
                             </div>
                         </div>
+                    </div>
 
-                        <!--
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img data-src="images/team/megger.jpg" class="img-responsive lazy-img" alt="" />
+                            <div class="org">
+                                <h4>Megger</h4>
+                                <h4><a href="https://megger.com/">Visit Website</a></h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img data-src="images/team/gemini pipes.jpg" class="img-responsive lazy-img" alt="" />
+                            <div class="org">
+                                <h4>Gemini Pipes</h4>
+                                <h4><a href="http://geminipipes.com/">Visit Website</a></h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img data-src="images/team/polycab.jpg" class="img-responsive lazy-img" alt="" />
+                            <div class="org">
+                                <h4>Polycab</h4>
+                                <h4><a href="http://polycab.com/">Visit Website</a></h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img data-src="images/team/finolex.jpg" class="img-responsive lazy-img" alt="" />
+                            <div class="org">
+                                <h4>Finolex</h4>
+                                <h4><a href="https://finolex.com/">Visit Website</a></h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img data-src="images/team/neptune.jpg" class="img-responsive lazy-img" alt="" />
+                            <div class="org">
+                                <h4>Neptune</h4>
+                                <h4>
+                                    <a href="https://www.neptuneindia.com/">Visit Website</a>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img data-src="images/team/lscables.jpg" class="img-responsive lazy-img" alt="" />
+                            <div class="org">
+                                <h4>LS Cable &amp; System</h4>
+                                <h4>
+                                    <a href="http://www.lscns.com/en/main.asp">Visit Website</a>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img data-src="images/team/jindal.jpg" class="img-responsive lazy-img" alt="" />
+                            <div class="org">
+                                <h4>Jindal Power</h4>
+                                <h4>
+                                    <a href="https://www.jindalpower.com/">Visit Website</a>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img data-src="images/team/kalpa.png" class="img-responsive lazy-img" alt="" />
+                            <div class="org">
+                                <h4>Kalpa</h4>
+                                <h4>
+                                    <a href="http://kalpaelectrikal.com/">Visit Website</a>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img data-src="images/team/ebm.jpeg" class="img-responsive lazy-img" alt="" />
+                            <div class="org">
+                                <h4>EBM</h4>
+                                <h4>
+                                    <a href="http://www.ebmpapst.in/index.html">Visit Website</a>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img data-src="images/team/gemscab.JPG" class="img-responsive lazy-img" alt="" />
+                            <div class="org">
+                                <h4>Gemscab Cables</h4>
+                                <h4><a href="http://www.gemscab.com/">Visit Website</a></h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--
                         <div class="col-md-3 col-sm-6">
                             <div class="team-member">
                                 <img src="images/team/yamunadensons.png" class="img-responsive lazy-img" alt="">
@@ -1226,72 +1066,62 @@
                             </div>
                         </div>
                         -->
-                    </div>
                 </div>
             </div>
         </div>
-        <!-- End Associates Section -->
+    </div>
+    <!-- End Associates Section -->
 
-        <!-- Start Contact Section -->
+    <!-- Start Contact Section -->
 
-        <div
-            class="section-modal modal fade contact"
-            id="contact-modal"
-            tabindex="-1"
-            role="dialog"
-            aria-hidden="true"
-        >
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
+    <div class="section-modal modal fade contact" id="contact-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl"></div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="section-title text-center">
+                        <h3 style="color: black !important">Contact Us</h3>
+                        <br /><br />
                     </div>
                 </div>
-
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title text-center">
-                            <h3 style="color: black !important">Contact Us</h3>
-                            <br /><br />
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="footer-contact-info">
+                            <ul>
+                                <li><strong>Rajeev Batra (Director)</strong></li>
+                                <li>
+                                    <a href="mailto:roseate2015@Gmail.com" style="color:white;">
+                                        <u>roseate2015@Gmail.com</u></a>
+                                </li>
+                                <li>+919999562444</li>
+                                <li>01145681558</li>
+                                <br />
+                                <li><strong>Seema Batra (Supply Chain Manager)</strong></li>
+                                <li>
+                                    <a href="mailto:roseate082018@Gmail.com" style="color:white;">
+                                        <u>roseate082018@Gmail.com</u></a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-5">
-                            <div class="footer-contact-info">
-                                <ul>
-                                    <li><strong>Rajeev Batra (Director)</strong></li>
-                                    <li>
-                                        <a href="mailto:roseate2015@Gmail.com" style="color:white;">
-                                            <u>roseate2015@Gmail.com</u></a>
-                                    </li>
-                                    <li>+919999562444</li>
-                                    <li>01145681558</li>
-                                    <br />
-                                    <li><strong>Seema Batra (Supply Chain Manager)</strong></li>
-                                    <li>
-                                        <a
-                                            href="mailto:roseate082018@Gmail.com"
-                                            style="color:white;"
-                                        >
-                                            <u>roseate082018@Gmail.com</u></a
-                                        >
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
 
-                        <div class="col-md-4 col-md-offset-3">
-                            <div class="footer-contact-info">
-                                <h4>Working Hours</h4>
-                                <ul>
-                                    <li><strong>Monday - Friday:</strong> 10:00am to 06:00pm</li>
-                                    <li><strong>Saturday - Sunday:</strong> Closed</li>
-                                </ul>
-                            </div>
+                    <div class="col-md-4 col-md-offset-3">
+                        <div class="footer-contact-info">
+                            <h4>Working Hours</h4>
+                            <ul>
+                                <li><strong>Monday - Friday:</strong> 10:00am to 06:00pm</li>
+                                <li><strong>Saturday - Sunday:</strong> Closed</li>
+                            </ul>
                         </div>
                     </div>
-                    <!--/.row -->
-                    <!--
+                </div>
+                <!--/.row -->
+                <!--
                     <div class="row" style="padding-top: 50px;">
                         <div class="col-md-12">
                             <form name="sentMessage" id="contactForm" action = "formhandler.php" method = "post" novalidate>
@@ -1325,194 +1155,195 @@
                             </form>
                         </div>
                     </div>
-                --></div>
+                -->
             </div>
         </div>
-        <!-- End Contact Section -->
+    </div>
+    <!-- End Contact Section -->
 
-        <!-- Start Price List Section-->
-        <div
-            class="section-modal modal fade"
-            id="price-modal"
-            tabindex="-1"
-            role="dialog"
-            aria-hidden="true"
-        >
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
+    <!-- Start Price List Section-->
+    <div class="section-modal modal fade" id="price-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl"></div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="section-title text-center">
+                    <h3 style="color: black !important">Price Lists</h3>
+                    <br /><br />
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <ul>
+                                <li class="price-list-item">
+                                    <a href="https://pdfhost.io/v/YIm8c8Gra_Schneider_Price_List.pdf" target="_blank">
+                                        Schneider
+                                    </a>
+                                </li>
+                                <li class="price-list-item">
+                                    <a href="https://pdfhost.io/v/BThJemNRU_polycab.pdf" target="_blank">
+                                        Polycab
+                                    </a>
+                                </li>
+                                <li class="price-list-item">
+                                    <a href="https://pdfhost.io/v/kM9vhkCaV_abb.pdf">
+                                        ABB
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4">
+                            <ul>
+                                <li class="price-list-item">
+                                    <a href="http://newsletters.socomec.com/documenti/36/List%20Documents/FINAL%20PRICE%20LIST%202020.pdf"
+                                        target="_blank">
+                                        Socomec
+                                    </a>
+                                </li>
+                                <li class="price-list-item">
+                                    <a href="https://pdfhost.io/v/dLSWK.rxF_legrand.pdf">
+                                        Legrand
+                                    </a>
+                                </li>
+                                <li class="price-list-item">
+                                    <a href="https://pdfhost.io/v/xx8LkfsGQ_philips.pdf" target="_blank">
+                                        Philips
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4">
+                            <ul>
+                                <li class="price-list-item">
+                                    <a href="https://roseate.s3.ap-south-1.amazonaws.com/pricelists/akg.jpg"
+                                        target="_blank">
+                                        AKG Conduits
+                                    </a>
+                                </li>
+                                <li class="price-list-item">
+                                    <a href="https://roseate.s3.ap-south-1.amazonaws.com/pricelists/finolex.jpg"
+                                        target="_blank">
+                                        Finolex
+                                    </a>
+                                </li>
+                                <li class="price-list-item">
+                                    <a href="https://roseate.s3.ap-south-1.amazonaws.com/pricelists/dowells.pdf"
+                                        target="_blank">
+                                        Dowells
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <ul>
+                                <li class="price-list-item">
+                                    <a href="https://pdfhost.io/v/7C52q0Pia_siemens_switchgear_contactors_price_listpdf.pdf"
+                                        target="_blank">
+                                        Siemens Switchgear Contactors
+                                    </a>
+                                </li>
+                                <li class="price-list-item">
+                                    <a href="https://pdfhost.io/v/OmiKdZMeG_siemens_mccb_control_switches_price_listpdf.pdf"
+                                        target="_blank">
+                                        Siemens MCCB Control Switches
+                                    </a>
+                                </li>
+                                <li class="price-list-item">
+                                    <a href="https://pdfhost.io/v/jhvX2gmZX_IMG_2512jpg.pdf" target="_blank">
+                                        Polycab
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4">
+                            <ul>
+                                <li class="price-list-item">
+                                    <a href="https://roseate.s3.ap-south-1.amazonaws.com/pricelists/BEC.jpg"
+                                        target="_blank">
+                                        BEC
+                                    </a>
+                                </li>
+                                <li class="price-list-item">
+                                    <a href="https://roseate.s3.ap-south-1.amazonaws.com/pricelists/legrand.pdf"
+                                        target="_blank">
+                                        Legrand
+                                    </a>
+                                </li>
+                                <li class="price-list-item">
+                                    <a href="https://roseate.s3.ap-south-1.amazonaws.com/pricelists/3M.pdf"
+                                        target="_blank">
+                                        3M
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4">
+                            <ul>
+                                <li class="price-list-item">
+                                    <a href="https://roseate.s3.ap-south-1.amazonaws.com/pricelists/BCH.jpg"
+                                        target="_blank">
+                                        BCH
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li class="price-list-item">
+                                    <a href="https://roseate.s3.ap-south-1.amazonaws.com/pricelists/schneider_11-01-2021.pdf"
+                                        target="_blank">
+                                        Schneider
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+    <!--Price List Section -->
 
-                <div class="container">
+    <!-- Start Testimonial Section -->
+    <div class="section-modal modal fade contact" id="testimonial-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl"></div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
                     <div class="section-title text-center">
-                        <h3 style="color: black !important">Price Lists</h3>
-                        <br /><br />
-                        <div class = "row">
-                            <div class = "col-sm-4">
-                                <ul>
-                                    <li class = "price-list-item">
-                                        <a href = "https://pdfhost.io/v/YIm8c8Gra_Schneider_Price_List.pdf" target = "_blank">
-                                            Schneider
-                                        </a>
-                                    </li>
-                                    <li class = "price-list-item">
-                                        <a href = "https://pdfhost.io/v/BThJemNRU_polycab.pdf" target = "_blank">
-                                            Polycab
-                                        </a>
-                                    </li>
-                                    <li class = "price-list-item">
-                                        <a href = "https://pdfhost.io/v/kM9vhkCaV_abb.pdf">
-                                            ABB
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class = "col-sm-4">
-                                <ul>
-                                    <li class = "price-list-item">
-                                        <a href ="http://newsletters.socomec.com/documenti/36/List%20Documents/FINAL%20PRICE%20LIST%202020.pdf" target = "_blank">
-                                            Socomec
-                                        </a>
-                                    </li>
-                                    <li class = "price-list-item">
-                                        <a href = "https://pdfhost.io/v/dLSWK.rxF_legrand.pdf">
-                                            Legrand
-                                        </a>
-                                    </li>
-                                    <li class = "price-list-item">
-                                        <a href = "https://pdfhost.io/v/xx8LkfsGQ_philips.pdf" target = "_blank">
-                                            Philips
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class = "col-sm-4">
-                                <ul>
-                                    <li class = "price-list-item">
-                                        <a href ="https://roseate.s3.ap-south-1.amazonaws.com/pricelists/akg.jpg" target = "_blank">
-                                            AKG Conduits
-                                        </a>
-                                    </li>
-                                    <li class = "price-list-item">
-                                        <a href = "https://roseate.s3.ap-south-1.amazonaws.com/pricelists/finolex.jpg" target = "_blank">
-                                            Finolex
-                                        </a>
-                                    </li>
-                                    <li class = "price-list-item">
-                                        <a href = "https://roseate.s3.ap-south-1.amazonaws.com/pricelists/dowells.pdf" target = "_blank">
-                                            Dowells
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class = "col-sm-4">
-                                <ul>
-                                    <li class = "price-list-item">
-                                        <a href ="https://pdfhost.io/v/7C52q0Pia_siemens_switchgear_contactors_price_listpdf.pdf" target = "_blank">
-                                            Siemens Switchgear Contactors
-                                        </a>
-                                    </li>
-                                    <li class = "price-list-item">
-                                        <a href = "https://pdfhost.io/v/OmiKdZMeG_siemens_mccb_control_switches_price_listpdf.pdf" target = "_blank">
-                                            Siemens MCCB Control Switches
-                                        </a>
-                                    </li>
-                                    <li class = "price-list-item">
-                                        <a href = "https://pdfhost.io/v/jhvX2gmZX_IMG_2512jpg.pdf" target = "_blank">
-                                            Polycab
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class = "col-sm-4">
-                                <ul>
-                                    <li class = "price-list-item">
-                                        <a href ="https://roseate.s3.ap-south-1.amazonaws.com/pricelists/BEC.jpg" target = "_blank">
-                                            BEC
-                                        </a>
-                                    </li>
-                                    <li class = "price-list-item">
-                                        <a href = "https://roseate.s3.ap-south-1.amazonaws.com/pricelists/legrand.pdf" target = "_blank">
-                                            Legrand
-                                        </a>
-                                    </li>
-                                    <li class = "price-list-item">
-                                        <a href = "https://roseate.s3.ap-south-1.amazonaws.com/pricelists/3M.pdf" target = "_blank">
-                                            3M
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class = "col-sm-4">
-                                <ul>
-                                    <li class = "price-list-item">
-                                        <a href ="https://roseate.s3.ap-south-1.amazonaws.com/pricelists/BCH.jpg" target = "_blank">
-                                            BCH
-                                        </a>
-                                    </li>
-                                </ul>
-                                <ul>
-                                    <li class = "price-list-item">
-                                        <a href ="https://roseate.s3.ap-south-1.amazonaws.com/pricelists/schneider_11-01-2021.pdf" target = "_blank">
-                                            Schneider
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                        <h3 style="color: black !important">Financials</h3>
+                        <br />
                     </div>
                 </div>
+                <div class="row">
+                    <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+                </div>
+
+                <script async defer src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+                <script async defer src="js/financials.js"></script>
+                <script src="js/loading.js"></script>
+                <!-- <script src="https://apis.google.com/js/platform.js"></script> -->
+                <script src="https://apis.google.com/js/api.js"></script>
+                <script src="js/index.js"></script>
             </div>
         </div>
-        <!--Price List Section -->
+    </div>
+    <div id="citations">
+        <a href="https://iconscout.com/icon/lg-3" target="_blank">Lg Logo Icon</a> by <a
+            href="https://iconscout.com/contributors/icon-mafia">Icon Mafia</a> on <a
+            href="https://iconscout.com">Iconscout</a>
+    </div>
 
-        <!-- Start Testimonial Section -->
-        <div
-            class="section-modal modal fade contact"
-            id="testimonial-modal"
-            tabindex="-1"
-            role="dialog"
-            aria-hidden="true"
-        >
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
-                </div>
+    <!-- End Testimonial Section -->
+    <script async defer src="bootstrap/js/bootstrap.js"></script>
+    <script async defer src="js/jqBootstrapValidation.js"></script>
+</body>
 
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title text-center">
-                            <h3 style="color: black !important">Financials</h3>
-                            <br />
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
-                    </div>
-                    
-                    <script
-                        async
-                        defer
-                        src="https://canvasjs.com/assets/script/canvasjs.min.js"
-                    ></script>
-                    <script async defer src="js/financials.js"></script>
-                    <script src="js/loading.js"></script>
-                    <script src="js/index.js"></script>
-                </div>
-            </div>
-        </div>
-        <div id = "citations">
-          <a href="https://iconscout.com/icon/lg-3" target="_blank">Lg Logo Icon</a> by <a href="https://iconscout.com/contributors/icon-mafia">Icon Mafia</a> on <a href="https://iconscout.com">Iconscout</a>
-        </div>
-
-        <!-- End Testimonial Section -->
-        <script async defer src="bootstrap/js/bootstrap.js"></script>
-        <script async defer src="js/jqBootstrapValidation.js"></script>
-    </body>
 </html>
