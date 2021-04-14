@@ -686,13 +686,13 @@ fieldset[disabled] .btn-primary.active {
     border-radius: 2px;
 }
 
-.team-member:hover .org {
+/* .team-member:hover .org {
     opacity: 1;
     -webkit-animation: pulse;
     animation: pulse;
     animation-duration: 300ms;
     -webkit-animation-duration: 300ms;
-}
+} */
 
 .canvasjs-chart-credit {
     display: none;
