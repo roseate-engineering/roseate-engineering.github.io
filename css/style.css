@@ -17,6 +17,11 @@ body {
     margin: 1em;
 }
 
+.logo {
+    position: relative;
+    top: 25px;
+}
+
 .initially-hidden {
     visibility: hidden;
 }
