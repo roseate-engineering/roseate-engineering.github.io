@@ -7,7 +7,14 @@ body {
     background-size: cover;
 
     background-position: 50% 50%;
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.financials-frame {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    margin: 1em;
 }
 
 .initially-hidden {
@@ -47,7 +54,7 @@ a:hover {
 }
 
 p {
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 13px;
     line-height: 21px;
 }
@@ -103,7 +110,7 @@ fieldset[disabled] .btn-primary.active {
     color: #666 !important;
     font-style: italic;
     font-size: 28px;
-    font-family: "Oswald", sans-serif;
+    font-family: 'Oswald', sans-serif;
     text-transform: none;
 }
 
@@ -118,7 +125,7 @@ fieldset[disabled] .btn-primary.active {
 /**** Start Logo Section ****/
 
 .logo h1 {
-    font-family: "Lobster", cursive;
+    font-family: 'Lobster', cursive;
     color: #fff;
     font-size: 60px;
 }
@@ -177,7 +184,7 @@ fieldset[disabled] .btn-primary.active {
 }
 
 .menu-item a p {
-    font-family: "Oswald", sans-serif;
+    font-family: 'Oswald', sans-serif;
     font-weight: 300;
     font-size: 20px;
 }
@@ -315,7 +322,7 @@ fieldset[disabled] .btn-primary.active {
     font-size: 15px;
     color: #666;
     font-weight: 300;
-    font-family: "Oswald", sans-serif;
+    font-family: 'Oswald', sans-serif;
 }
 
 .feature-2 h4 {
@@ -323,7 +330,7 @@ fieldset[disabled] .btn-primary.active {
     color: #444;
     padding-bottom: 10px;
     font-weight: 300;
-    font-family: "Oswald", sans-serif;
+    font-family: 'Oswald', sans-serif;
 }
 
 .feature p,
@@ -394,7 +401,7 @@ fieldset[disabled] .btn-primary.active {
     padding-top: 20%;
     padding-bottom: 10%;
     color: #fff;
-    font-family: "Oswald", sans-serif;
+    font-family: 'Oswald', sans-serif;
     font-weight: 300;
     font-size: 20px;
 }
@@ -521,7 +528,7 @@ fieldset[disabled] .btn-primary.active {
     padding: 10px;
     font-size: 18px;
     color: #fff;
-    font-family: "Oswald", sans-serif;
+    font-family: 'Oswald', sans-serif;
     font-weight: 300;
 }
 
@@ -626,7 +633,7 @@ fieldset[disabled] .btn-primary.active {
 }
 
 .org {
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Open Sans', sans-serif;
     padding-left: 10px;
     position: absolute;
     top: 0;
@@ -645,7 +652,7 @@ fieldset[disabled] .btn-primary.active {
     font-size: 25px;
     font-weight: 300;
     color: #ff432e;
-    font-family: "Oswald", sans-serif;
+    font-family: 'Oswald', sans-serif;
     text-transform: none;
     text-align: center;
     padding-top: 20%;
@@ -669,11 +676,11 @@ fieldset[disabled] .btn-primary.active {
 
 .org h4 a {
     text-decoration: none;
-    color: #ddd
+    color: #ddd;
 }
 
 .org h4 a:hover {
-    color: #aaa
+    color: #aaa;
 }
 
 .org li a {
@@ -852,28 +859,28 @@ fieldset[disabled] .btn-primary.active {
 
 .contact::-webkit-input-placeholder {
     text-transform: uppercase;
-    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 700;
     color: #bbb;
 }
 
 .contact:-moz-placeholder {
     text-transform: uppercase;
-    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 700;
     color: #bbb;
 }
 
 .contact::-moz-placeholder {
     text-transform: uppercase;
-    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 700;
     color: #bbb;
 }
 
 .contact:-ms-input-placeholder {
     text-transform: uppercase;
-    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 700;
     color: #bbb;
 }
@@ -904,7 +911,7 @@ fieldset[disabled] .btn-primary.active {
 }
 
 .testimonial h4 {
-    font-family: "Oswald", sans-serif;
+    font-family: 'Oswald', sans-serif;
     font-weight: 300;
     padding-top: 20px;
     padding-bottom: 20px;
