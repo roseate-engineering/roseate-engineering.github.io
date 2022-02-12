@@ -17,6 +17,12 @@ body {
     margin: 1em;
 }
 
+@media only screen and (min-width: 320px) and (max-width: 425px) {
+    .financials-frame {
+        transform: translate(-50%) scale(0.5);
+    }
+}
+
 .logo {
     position: relative;
     top: 25px;
